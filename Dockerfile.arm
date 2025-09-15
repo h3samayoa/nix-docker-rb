@@ -1,4 +1,4 @@
-FROM nixos/nix:2.27.1
+FROM nixos/nix:2.31.1-arm64
 
 # ARM machines does not support seccomp
 # Add parallelism configuration for faster builds
