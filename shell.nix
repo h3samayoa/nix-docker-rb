@@ -4,26 +4,25 @@ pkgs.mkShell {
   name = "nixos-hypervisor";
 
   packages = with pkgs; [
-    nixos-generators
-    nixos-rebuild
+    # nixos-generators
+    # nixos-rebuild
 
-    qemu
-    gptfdisk
-    util-linux
+    # qemu
+    # gptfdisk
+    # util-linux
 
-    openssh
-    curl
-    jq
-    tree
-    htop
+    # openssh
+    # curl
+    # jq
+    # tree
+    # htop
 
-    nixpkgs-fmt
-    statix
-    deadnix
+    # nixpkgs-fmt
+    # statix
+    # deadnix
 
-    podman
+    # podman
     docker
-    gemini-cli
   ];
 
   shellHook = ''

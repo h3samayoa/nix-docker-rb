@@ -1,9 +1,7 @@
 {
-  description = "NixOS configuration for my hypervisor (mbhv)";
+  description = "nix docker rb";
 
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }:
     let
@@ -17,15 +15,6 @@
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
     in 
     {
-
-      nixosConfigurations.mbhv = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { }; 
-        modules = [
-          ../hv/configuration.nix
-        ];
-      };
-
       nixosConfigurations.iso = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./iso/iso.nix ];
