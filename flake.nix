@@ -17,7 +17,7 @@
     {
       nixosConfigurations.iso = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./iso/iso.nix ];
+        modules = [ ./iso.nix ];
       };
 
       packages = forAllSystems (system: {

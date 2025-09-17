@@ -1,28 +1,11 @@
 { pkgs ? import <nixpkgs> { } }:
 
 pkgs.mkShell {
-  name = "nixos-hypervisor";
+  name = "rb example shell";
 
   packages = with pkgs; [
-    # nixos-generators
-    # nixos-rebuild
-
-    # qemu
-    # gptfdisk
-    # util-linux
-
-    # openssh
-    # curl
-    # jq
-    # tree
-    # htop
-
-    # nixpkgs-fmt
-    # statix
-    # deadnix
-
-    # podman
     docker
+    just
   ];
 
   shellHook = ''
